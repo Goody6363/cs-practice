@@ -3,6 +3,8 @@ def c(a, b, o):
         return a + b
     elif o == "-":
         return a - b
+    elif o == "*":
+        return a * b
 a = float(input("Введите первое число: "))
 o = input("Введите знак: ")
 b = float(input("Введите второе число: "))
