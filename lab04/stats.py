@@ -5,10 +5,12 @@ def parse_record(line: str) -> dict:
     city = parts[0].strip()
     temp = parts[1].strip()
     date = parts[2].strip()
+    
     if not city or not date:
         raise ValueError("Город или дата пустые")
+    
     try:
-        temperature = float(temp)
+        temperature = float(temp.replace(",", "."))
     except ValueError:
         raise ValueError("Температура должна быть числом")
     return {
