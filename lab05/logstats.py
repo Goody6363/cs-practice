@@ -24,13 +24,7 @@ def parse_event(line: str) -> dict:
 
 
 def count_levels(lines: list[str]) -> dict:
-    counts = {
-        "BROKEN": 0,
-        "DEBUG": 0,
-        "ERROR": 0,
-        "INFO": 0,
-        "WARNING": 0
-    }
+    counts = {}
     
     for line in lines:
         if not line.strip():
