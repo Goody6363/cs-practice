@@ -12,8 +12,8 @@ def main():
         errors = top_errors(log, 5)
 
     print(sum(counts.values()))
-    print(counts["ERROR"])
-    print(counts["BROKEN"])
+    print(counts.get("ERROR", 0))
+    print(counts.get("BROKEN", 0))
 
     report = format_report(counts, errors)
 
