@@ -7,3 +7,9 @@ def count_by_extension(paths: List[str]) -> Dict[str, int]:
         result[ext] = result.get(ext, 0) + 1
     return result
 
+def deepest_path(paths: List[str]) -> str:
+    if not paths:
+        return ""
+
+    return min(paths, key=lambda p: (-p.count('/'), p))
+
